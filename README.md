@@ -1,1 +1,1 @@
-# VirTect: Detection of viruses from RNA-Seq on human samples
+VirTect: Detection of viruses from RNA-Seq on human samples
