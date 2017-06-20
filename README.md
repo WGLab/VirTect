@@ -11,4 +11,5 @@ This is the GitHub repository for the documentation of the VirTect software, des
 
 
 Reference
+
 Khan A, Stucky A, Wang K, Zhong JF, Zhong, VirTect: Detection of viruses from tumor samples by RNA-Seq, In prepration. 
