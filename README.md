@@ -1,4 +1,5 @@
                                  VirTect: Detection of viruses from RNA-Seq on human samples
+                                 
                                  
 VirTect is an efficient software tool for virus detection. Virtect take NGS data as a input in FASTQ format and mapped to human reference genome using tophat. After subtraction of non-human sequence from the human sequence, VirTecst used bwa-men command to align the non-human sequence to our defined 757 different virus database to report the virus. After alignment of non-human sequence to virus database, VirTect do the filtrations to discriminate the viral sequence from the noise/artifact and finally report the viruses. 
 
