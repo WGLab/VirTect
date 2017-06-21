@@ -1,4 +1,4 @@
-#VirTect
+VirTect
 
 
 Virtect is a softare that detected virus from from RNA-Seq on human samples.
