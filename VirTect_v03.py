@@ -13,7 +13,7 @@ def main():
     parser.add_argument('-ucsc_gene', '--gtf',  required = True, metavar = 'Reference', type = str, help ='Reference and index files')
     parser.add_argument('-index', '--index_dir',  required = True, metavar = 'index files directory', type = str, help ='Reference and index files')
     parser.add_argument('-index_vir', '--index_vir',  required = True, metavar = 'index files directory', type = str, help ='Reference and index files')
-    parser.add_argument('-t', '--n_thread', required = False, metavar = 'number of threads, default: 12', default = '8', type = str, help ='number of threads')
+    parser.add_argument('-t', '--n_thread', required = False, metavar = 'number of threads, default: 12', default = '12', type = str, help ='number of threads')
 
     args = parser.parse_args()
     fq1 = os.path.abspath(args.fq1)
