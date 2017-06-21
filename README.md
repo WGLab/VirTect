@@ -48,4 +48,4 @@ For academic and non-profit use, you are free to fork, download, modify, distrib
 
 Reference
 
-Khan A, Stucky A, Wang K, Zhong JF, Zhong, VirTect: Detection of viruses from tumor samples by RNA-Seq, In prepration. 
+Khan A, Stucky A, Wang K, Zhong JF, VirTect: Detection of viruses from tumor samples by RNA-Seq, In prepration. 
