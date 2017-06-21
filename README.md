@@ -25,7 +25,7 @@ Installation
 
 Please clone the repository into your computer:
 
-git clone https://github.com/WGLab/VirTect
+    git clone https://github.com/WGLab/VirTect
 
 Then enter VirTect directory:
 
