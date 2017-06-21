@@ -29,13 +29,13 @@ git clone https://github.com/WGLab/VirTect
 
 Then enter VirTect directory:
 
-cd VirTect
+    cd VirTect
 
 Synopsis
 
-python VirTect_v03.py --help
+    python VirTect_v03.py --help
 
-   python VirTect_v03.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene your_file.gtf -index the reference index directory -index_vir The viurs reference file with index -t number of threads
+    python VirTect_v03.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene your_file.gtf -index the reference index directory -index_vir The viurs reference file with index -t number of threads
 
 
 License Agreement
