@@ -1,5 +1,5 @@
                              
-#VirTect
+##VirTect
 
 Virtect is a softare that detected virus from from RNA-Seq on human samples.
 
@@ -15,7 +15,9 @@ This is the GitHub repository for the documentation of the VirTect software, des
 Dependency
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
+
 samtools (http://samtools.sourceforge.net/)
+
 bedtools (http://bedtools.readthedocs.io/en/latest/)
 
 Installation
