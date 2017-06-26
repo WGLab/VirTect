@@ -21,7 +21,7 @@ samtools (http://samtools.sourceforge.net/)
 
 bedtools (http://bedtools.readthedocs.io/en/latest/)
 
-Installation
+# Installation
 
 Please clone the repository into your computer:
 
