@@ -44,8 +44,15 @@ By using the software, you acknowledge that you agree to the terms below:
 
 For academic and non-profit use, you are free to fork, download, modify, distribute and use the software without restriction.
  
- 
+ ## Contact
+Atlas Khan (ak4046@cumc.columbia.edu)
+
+Kai Wang (kw@cumc.columbia.edu)
 
 ## Reference
 
 Khan A, Stucky A, Wang K, Zhong JF, VirTect: Detection of viruses from tumor samples by RNA-Seq, In prepration. 
+
+
+## More information
+Wang Genomics Lab Homepage (http://wglab.org/)
