@@ -15,6 +15,9 @@ This is the GitHub repository for the documentation of the VirTect software, des
 
 ## Dependency
 
+First we need to install the following publicly available tools:
+
+
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
 
 samtools (http://samtools.sourceforge.net/)
