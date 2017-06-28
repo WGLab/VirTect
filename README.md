@@ -1,7 +1,7 @@
 ## VirTect
 
 
-Virtect is a softare that detected virus from RNA-Seq on human samples.
+Virtect is a software that detected virus from RNA-Seq on human samples.
 
 
 ## Introduction
@@ -14,6 +14,9 @@ Here is an example that how VirTect works, for the HCC sample, we have about 53 
 This is the GitHub repository for the documentation of the VirTect software, described in the paper listed below. If you like this repository, please click on the "Star" button on top of this page, to show appreciation to the repository maintainer. If you want to receive notifications on changes to this repository, please click the "Watch" button on top of this page.
 
 ## Dependency
+
+First we need to install the following publicly available tools:
+
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
 
@@ -44,8 +47,15 @@ By using the software, you acknowledge that you agree to the terms below:
 
 For academic and non-profit use, you are free to fork, download, modify, distribute and use the software without restriction.
  
- 
+ ## Contact
+Atlas Khan (ak4046@cumc.columbia.edu)
+
+Kai Wang (kw2701@cumc.columbia.edu)
 
 ## Reference
 
-Khan A, Stucky A, Wang K, Zhong JF, VirTect: Detection of viruses from tumor samples by RNA-Seq, In prepration. 
+Khan A, Stucky A, Wang K, Zhong JF, **VirTect: Detection of viruses from tumor samples by RNA-Seq**, In prepration. 
+
+
+## More information
+Wang Genomics Lab Homepage (http://wglab.org/)
