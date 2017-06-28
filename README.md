@@ -50,7 +50,7 @@ For academic and non-profit use, you are free to fork, download, modify, distrib
  ## Contact
 Atlas Khan (ak4046@cumc.columbia.edu)
 
-Kai Wang (kw@cumc.columbia.edu)
+Kai Wang (kw2701@cumc.columbia.edu)
 
 ## Reference
 
