@@ -13,7 +13,7 @@ def main():
 
     parser = argparse.ArgumentParser(description='VirTect: Pipeline for Virus detection')
     parser.add_argument('-1', '--fq1',  required = True, metavar = 'read1.fastq', type = str, help ='The read 1 of the paired end RNA-seq')
-    parser.add_argument('-2', '--fq2',  required = True, metavar = 'read1.fastq', type = str, help ='The read 2 of the paired end RNA-seq')
+    parser.add_argument('-2', '--fq2',  required = True, metavar = 'read2.fastq', type = str, help ='The read 2 of the paired end RNA-seq')
     parser.add_argument('-o', '--out_dir',  required = True, metavar = 'output directory', type = str, help ='Define the output directory to be stored the alignement results')
     parser.add_argument('-ucsc_gene', '--gtf',  required = True, metavar = 'gtf', type = str, help ='The input gtf file')
     parser.add_argument('-index', '--index_dir',  required = True, metavar = 'index files', type = str, help ='The directory of index files with hg38 prefix of the fasta file i.e,. index_files_directory/hg38')
