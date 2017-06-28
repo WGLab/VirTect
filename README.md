@@ -54,7 +54,7 @@ Kai Wang (kw2701@cumc.columbia.edu)
 
 ## Reference
 
-Khan A, Stucky A, Wang K, Zhong JF, **VirTect: Detection of viruses from tumor samples by RNA-Seq**, In prepration. 
+Khan A, Stucky A, Wang K, Zhong JF, **VirTect: Detection of viruses from tumor samples by RNA-Seq**, In preparation. 
 
 
 ## More information
