@@ -67,11 +67,11 @@ def main():
         os.system(cmd7)
     sort()
     
-    subprocess.call("./continou_region.sh", shell=True)
+    subprocess.call("./continuous_region.sh", shell=True)
 
     
     print ("The continous length")
-    file =open("continou_region.txt", "r")
+    file =open("continuous_region.txt", "r")
 
     out =open("final_continou_test_region.txt", "w")
     
@@ -91,10 +91,7 @@ def main():
     else:
         print ("----------------------There is no virus at all in the sample :)----------------------------------------------------")
     out.close()
-   
-
-    
-
+ 
 
 
 if __name__ == '__main__':
