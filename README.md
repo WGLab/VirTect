@@ -15,7 +15,7 @@ This is the GitHub repository for the documentation of the VirTect software, des
 
 ## Dependency
 
-First we need to install the following publicly available tools:
+First we need to install the following publicly available tools to run the VirTect:
 
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
