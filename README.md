@@ -51,7 +51,7 @@ This will downlaod the fasta, the gencode gtf files, and also will generate the 
 
 ## Viruses reference genomes
 
-We already download and generate the index for each of the virus in our virus database, which are saved in viruses_reference, which can be used directly from this directory.  
+We already download and generate the index for each of the virus in our virus database, which are saved in viruses_reference directory, which can be used directly from this directory.  
 
 ## Synopsis
 
