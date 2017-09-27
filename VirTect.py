@@ -17,7 +17,7 @@ def main():
     parser.add_argument('-o', '--out_dir',  required = True, metavar = 'output directory', type = str, help ='Define the output directory to be stored the alignement results')
     parser.add_argument('-ucsc_gene', '--gtf',  required = True, metavar = 'gtf', type = str, help ='The input gtf file')
     parser.add_argument('-index', '--index_dir',  required = True, metavar = 'index files', type = str, help ='The directory of index files with hg38 prefix of the fasta file i.e,. index_files_directory/hg38')
-    parser.add_argument('-index_vir', '--index_vir',  required = True, metavar = 'virus fasta', type = str, help ='The fasta file of the virus')
+    parser.add_argument('-index_vir', '--index_vir',  required = True, metavar = 'virus fasta', type = str, help ='The fasta file of the virus genomes')
     parser.add_argument('-t', '--n_thread', required = False, metavar = 'Number of threads, default: 8', default = '8', type = str, help ='Number of threads')
 
     args = parser.parse_args()
@@ -73,7 +73,7 @@ def main():
     print ("The continous length")
     file =open("continuous_region.txt", "r")
 
-    out =open("final_continou_test_region.txt", "w")
+    out =open("Final_continous_test_region.txt", "w")
     
     if (os.fstat(file.fileno()).st_size) >0:
             for i in file.readlines():
