@@ -26,6 +26,7 @@ samtools (http://samtools.sourceforge.net/)
 
 bedtools (http://bedtools.readthedocs.io/en/latest/)
 
+
 ## Installation
 
 Please clone the repository into your computer:
@@ -35,12 +36,21 @@ Please clone the repository into your computer:
 Then enter VirTect directory:
 
     cd VirTect
+    
+
+## Generate the index of human fasta file
+Firsrt download the fasta file, you don't have the human fasta file, however, only run this code for first time to down load the fasta file and geneate the index for fasta file
+
+    python download_fasta_index.py 
+    
+This will downlaod the fasta, the gencode gtf files, and also will generate the index file *this should be run for first time and only once*
+
 
 ## Synopsis
 
     python VirTect.py --help
 
-    python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/hg38 -index_vir viruses_reference/viruses_757.fasta -t 8
+    python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p10.genome -index_vir viruses_reference/viruses_757.fasta -t 8
 
 
 ## License Agreement
