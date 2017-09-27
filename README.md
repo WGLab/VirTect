@@ -43,7 +43,7 @@ Firsrt download the fasta file, you don't have the human fasta file, however, on
 
     python download_fasta_index.py 
     
-This will downlaod the fasta, the gencode gtf files, and also will generate the index file *this should be run for first time and only once*
+This will downlaod the fasta, the gencode gtf files, and also will generate the index file **this should be run for first time and only once**
 
 
 ## Synopsis
