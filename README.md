@@ -38,13 +38,16 @@ Then enter VirTect directory:
     cd VirTect
     
 
-## Generate the index of human fasta file
-Firsrt download the fasta file, you don't have the human fasta file, however, only run this code for first time to down load the fasta file and geneate the index for fasta file
+## Download and generate the index of human fasta file
+Firsrt download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
 
-    python download_fasta_index.py 
+    python download_fasta_index_v02.py --help
     
-This will downlaod the fasta, the gencode gtf files, and also will generate the index file **this should be run for first time and only once**
+This will downlaod the fasta, the gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time and only once**. It will download the hg38 or hg19 fasta file based on user input.
 
+## Viruses reference genomes
+
+We already download and generate the index for each of the virus in our virus database, which are saved in viruses_reference, which can be used directly from this directory.  
 
 ## Synopsis
 
