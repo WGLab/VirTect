@@ -41,6 +41,7 @@ Then enter VirTect directory:
     
 
 ## Download and generate the index of human fasta file
+
 Firsrt need to download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
 
     python download_fasta_index_v02.py --help
@@ -55,10 +56,13 @@ We already download and generate the index for each of the virus in our virus da
 
 ## Synopsis
 
+Fianly run the VirTect for virus detection from human RNA-seq data
+
     python VirTect.py --help
 
     python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p10.genome -index_vir viruses_reference/viruses_757.fasta -t 8
 
+After the running VerTect, we will have the final viruses file *Final_continous_test_region.txt*, if the sample has some virus. 
 
 ## License Agreement
 
