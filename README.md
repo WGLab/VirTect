@@ -20,7 +20,9 @@ First we need to install the following publicly available tools to run the VirTe
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
 
-bwa (http://bio-bwa.sourceforge.net/bwa.shtml) 
+bwa (http://bio-bwa.sourceforge.net/bwa.shtml)
+
+bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 
 samtools (http://samtools.sourceforge.net/)
 
@@ -39,11 +41,13 @@ Then enter VirTect directory:
     
 
 ## Download and generate the index of human fasta file
-Firsrt download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
+Firsrt need to download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
 
     python download_fasta_index_v02.py --help
     
-This will downlaod the fasta, the gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time and only once**. It will download the hg38 or hg19 fasta file based on user input.
+    python download_fasta_index_v02.py -buildver hg38/hg19  
+    
+This will downlaod the fasta, the gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download the hg38 fasta file the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19.
 
 ## Viruses reference genomes
 
