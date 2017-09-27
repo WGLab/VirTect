@@ -20,6 +20,8 @@ First we need to install the following publicly available tools to run the VirTe
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
 
+bwa (http://bio-bwa.sourceforge.net/bwa.shtml) 
+
 samtools (http://samtools.sourceforge.net/)
 
 bedtools (http://bedtools.readthedocs.io/en/latest/)
@@ -54,7 +56,7 @@ Kai Wang (kw2701@cumc.columbia.edu)
 
 ## Reference
 
-Khan A, Stucky A, Parish P. Sedghizadeh, Zhang Xi, Wang K, Zhong JF, **Detection of viral infection in cancer and its application to HPV Induced Head and Neck Squamous Cell Carcinoma**, In preparation. 
+Khan A, Stucky A, Parish P. Sedghizadeh, Daniel A, Zhang Xi, Wang K, Zhong JF, **A viral genome detection method reveals HPV carcinogenesis mechanism in head and neck squamous cell carcinoma**, In preparation. 
 
 
 ## More information
