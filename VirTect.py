@@ -86,6 +86,7 @@ def main():
                 if j2 >= 100:
                     j3=i1 + "\t" +  str(j1[0]) + '\t' +  str(j1[1])
                     out.write('%s\n' % j3)
+                    print ("----------------------------------------The sample may have some real virus in the sample :(-----------------------------------------------------")
                 else:
                     print ("----------------------------------------There is no real virus in the sample :)-----------------------------------------------------")
     else:
