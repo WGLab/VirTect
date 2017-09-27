@@ -20,6 +20,8 @@ First we need to install the following publicly available tools to run the VirTe
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
 
+bwa (http://bio-bwa.sourceforge.net/bwa.shtml) 
+
 samtools (http://samtools.sourceforge.net/)
 
 bedtools (http://bedtools.readthedocs.io/en/latest/)
