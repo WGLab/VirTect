@@ -40,7 +40,7 @@ Then enter VirTect directory:
 
     python VirTect.py --help
 
-    python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene data/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index data/hg38 -index_vir data/viruses_757.fasta -t 8
+    python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/hg38 -index_vir viruses_reference/viruses_757.fasta -t 8
 
 
 ## License Agreement
