@@ -64,6 +64,9 @@ Fianly run the VirTect for virus detection from human RNA-seq data
 
 After the running VerTect, we will have the final viruses file *Final_continous_test_region.txt*, if the sample has some virus. 
 
+## Virus expression count
+
+
 ## License Agreement
 
 By using the software, you acknowledge that you agree to the terms below:
