@@ -17,6 +17,7 @@ This is the GitHub repository for the documentation of the VirTect software, des
 
 First we need to install the following publicly available tools to run the VirTect:
 
+cutadapt (http://cutadapt.readthedocs.io/en/stable/guide.html)
 
 tophat (https://ccb.jhu.edu/software/tophat/index.shtml)
 
@@ -43,8 +44,12 @@ Then enter VirTect directory:
 
 Before, we used VerTict, we need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data
 
-    python  --help
+    python VerTect_cutadapt.py --help
+    
+    python VerTect_cutadapt.py -1 Reads_1.fq -2 Reads_2.fq -F "AGATCGGAAGAG" -R "AGATCGGAAGAG"
 
+
+Here -F and -R are forward standard and reverse adapters, however, user can change to there own adapter if exist.
 
 ## Download and generate the index of human fasta file
 
@@ -71,6 +76,13 @@ Fianly run the VirTect for virus detection from human RNA-seq data
 After the running VerTect, we will have the final viruses file *Final_continous_test_region.txt*, if the sample has some virus. 
 
 ## Virus expression count
+
+After virus detection from samples, we may need to know that which gene is expressed in specfic virus, we need to do the Virus expression count. We need to run the follwing code to generate the count file. We have only viurs annotations for some HPV virus, however, we will work on it provide the annotation file for each of the virus in our virus database.
+
+    VerTect_count_expression.py --help
+
+Still we are working on it to provide annotations for each of the virus in our virus database.
+
 
 
 ## License Agreement
