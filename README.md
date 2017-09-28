@@ -39,6 +39,12 @@ Then enter VirTect directory:
 
     cd VirTect
     
+## Trimming
+
+Before, we used VerTict, we need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data
+
+    python  --help
+
 
 ## Download and generate the index of human fasta file
 
