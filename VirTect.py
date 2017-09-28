@@ -18,7 +18,7 @@ version = """%prog
 Copyright (C) 2017 Wang Genomic Lab
 VerTect is free for non-commercial use without warranty.
 Please contact the authors for commercial use.
-Written by Atlas Khan ,ak4046@cumc.columbia.edu and atlas.akhan@gmail.com.
+Written by Atlas Khan, ak4046@cumc.columbia.edu and atlas.akhan@gmail.com.
 ============================================================================
 """
 
@@ -134,7 +134,7 @@ def main():
 
     final_output=open("Final_continous_region.txt")
     if (os.fstat(final_output.fileno()).st_size) >0:
-        print ("----------------------------------------Note: The sample may have some real virus in the sample :(-----------------------------------------------------")
+        print ("----------------------------------------Note: The sample may have some real virus :(-----------------------------------------------------")
         headers = 'virus transcript_start transcript_end'.split()
         for line in fileinput.input(['Final_continous_region.txt'], inplace=True):
             if fileinput.isfirstline():
