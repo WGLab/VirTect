@@ -29,6 +29,14 @@ samtools (http://samtools.sourceforge.net/)
 
 bedtools (http://bedtools.readthedocs.io/en/latest/)
 
+## Links of useful database
+
+TCGA (https://cancergenome.nih.gov/)
+Human Papillomavirus (HPV) (https://pave.niaid.nih.gov/#home)
+FASTQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+IGV (http://software.broadinstitute.org/software/igv/)
+DAVID (https://david.ncifcrf.gov/)
+
 
 ## Installation
 
