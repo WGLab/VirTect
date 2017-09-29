@@ -4,13 +4,14 @@
 # Wang genomics lab http://wglab.org/
 # Description: python script for virus detection from human RNA-seq samples
 ##################################################################################
+
 #!/usr/bin/env python
 
 import sys
 import argparse
 import os
 import subprocess
-
+import os.path
 prog="VerTect.py"
 
 
@@ -33,6 +34,7 @@ def main():
 
     parser = argparse.ArgumentParser(description='VirTect: A pipeline for Virus detection')
 
+    parser.add_argument('-t', '--n_thread', required = False, metavar = 'Number of threads, default: 8', default = '8', type = str, help ='Number of threads') 
     parser.add_argument('-1', '--fq1',  required = True, metavar = 'read1.fastq', type = str, help ='The read 1 of the paired end RNA-seq')
  
     parser.add_argument('-2', '--fq2',  required = True, metavar = 'read2.fastq', type = str, help ='The read 2 of the paired end RNA-seq')
@@ -44,30 +46,79 @@ def main():
     parser.add_argument('-index', '--index_dir',  required = True, metavar = 'index files', type = str, help ='The directory of index files with hg38 prefix of the fasta file i.e,. index_files_directory/hg38')
 
     parser.add_argument('-index_vir', '--index_vir',  required = True, metavar = 'virus fasta', type = str, help ='The fasta file of the virus genomes')
+   
+    parser.add_argument('-d', '--distance', required = True, metavar = 'continuous_distance', type = int, help ='Define the continuous mapping distance of mapping reads to virus genome')
 
-    parser.add_argument('-t', '--n_thread', required = False, metavar = 'Number of threads, default: 8', default = '8', type = str, help ='Number of threads')
 
     args = parser.parse_args()
     
     fq1 = os.path.abspath(args.fq1)
-    
+
+
+    try:
+        #f1=open(fq1,'r')
+        os.path.isfile(fq1)
+        f1=open(fq1,'r')
+    except IOError:
+        print('Error: There was no Read 1 FASTQ file!')
+        sys.exit()
+
+
     fq2 = os.path.abspath(args.fq2)
-   
+
+
+    try:
+        os.path.isfile(fq2)
+        f2=open(fq2,'r')
+    
+    except IOError:
+        print('Error: There was no Read 2 FASTQ file!')
+        sys.exit()
+
 
 
     out = os.path.abspath(args.out)
     
+ 
+
+
     gtf = os.path.abspath(args.gtf)
+   
+    try:
+        os.path.isfile(gtf)
+        f2=open(gtf,'r')
+
+    except IOError:
+        print('Error: There was no GTF file!')
+        sys.exit()   
+
+    
+    index_dir = os.path.abspath(args.index_dir)
+
+    try:
+        os.path.isfile(index_dir)
+       # f4=open('hg38'+'."fa"','r')
+    except IOError:
+        print('Error: There was no fasta index directory!')
+        sys.exit()
+    
     
 
-    index_dir = os.path.abspath(args.index_dir)
-    
-    
+
     index_vir = os.path.abspath(args.index_vir)
+
+    #try:
+     #   os.path.isfile(index_vir)
+      #  f4=open(index_vir/viruses_757.fasta,'r')
+    #except IOError:
+     #   print('Error: There was no virus fasta index directory!')
+      #  sys.exit()
     
     n_thread = args.n_thread
 
-
+    distance = args.distance
+    
+    
     print ("Aligning by tophat")
     def alignment():
         cmd1='tophat -o '+out+' -p '+n_thread+' -G '+gtf+' '+index_dir+' '+fq1+'  '+fq2+''
@@ -113,23 +164,25 @@ def main():
 
     out =open("Final_continous_region.txt", "w")
     
-    if (os.fstat(file.fileno()).st_size) >0:
-            for i in file.readlines():
-                i1=i.split()[0]
-                i2=i.split()[1]
-                j1=i2.split("-")
-                j2=int(j1[1])-int(j1[0])
+    def continuous_distance(distance):
+        if (os.fstat(file.fileno()).st_size) >0:
+                for i in file.readlines():
+                    i1=i.split()[0]
+                    i2=i.split()[1]
+                    j1=i2.split("-")
+                    j2=int(j1[1])-int(j1[0])
 
 
-                if j2 >= 100:
-                    j3=i1 + "\t" +  str(j1[0]) + '\t' +  str(j1[1])
-                    out.write('%s\n' % j3)
+                    if j2 >= distance:
+                        j3=i1 + "\t" +  str(j1[0]) + '\t' +  str(j1[1])
+                        out.write('%s\n' % j3)
                    
-                else:
-                    pass                   
-    else:
-        pass 
-    out.close()
+                    else:
+                        pass
+        else:
+            pass 
+        out.close()
+    continuous_distance(distance)
     
 
     final_output=open("Final_continous_region.txt")
