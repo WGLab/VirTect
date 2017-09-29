@@ -70,7 +70,11 @@ We already download and generate the index for each of the virus in our virus da
 Fianly run the VirTect for virus detection from human RNA-seq data.
 
 ## OPTIONS
+
 * -h, --help show this help message and exit
+* --version show program''s version number and exit
+
+
     python VirTect.py --help
 
     python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p10.genome -index_vir viruses_reference/viruses_757.fasta -t 8
