@@ -67,7 +67,9 @@ We already download and generate the index for each of the virus in our virus da
 
 ## Synopsis
 
-Fianly run the VirTect for virus detection from human RNA-seq data
+Fianly run the VirTect for virus detection from human RNA-seq data.
+
+## OPTIONS
 
     python VirTect.py --help
 
