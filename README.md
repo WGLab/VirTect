@@ -83,11 +83,31 @@ Fianly run the VirTect for virus detection from human RNA-seq data.
 
 ## OPTIONS
 
-* -h, --help show this help message and exit
-* --version show program''s version number and exit
+ python VirTect.py --help
+ 
+ * -h, --help            show this help message and exit
+ * --version show program''s version number and exit
+ 
+ * -t Number of threads, default: 8, --n_thread Number of threads, default: 8
+                        Number of threads
+ * -1 read1.fastq, --fq1 read1.fastq
+                        The read 1 of the paired end RNA-seq
+ * -2 read2.fastq, --fq2 read2.fastq
+                        The read 2 of the paired end RNA-seq
+ * -o The output name for alignement, --out The output name for alignement
+                        Define the output directory to be stored the
+                        alignement results
+ * -ucsc_gene gtf, --gtf gtf
+                        The input gtf file
+ * -index index files, --index_dir index files
+                        The directory of index files with hg38 prefix of the
+                        fasta file i.e,. index_files_directory/hg38
+ * -index_vir virus fasta, --index_vir virus fasta
+                        The fasta file of the virus genomes
+ * -d continuous_distance, --distance continuous_distance
+                        Define the continuous mapping distance of mapping
+                        reads to virus genome
 
-
-    python VirTect.py --help
 
     python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p10.genome -index_vir viruses_reference/viruses_757.fasta -t 8
 
