@@ -162,7 +162,7 @@ def main():
     print ("The continous length")
     file =open("continuous_region.txt", "r")
 
-    out =open("Final_continous_region.txt", "w")
+    out_put =open("Final_continous_region.txt", "w")
     
     def continuous_distance(distance):
         if (os.fstat(file.fileno()).st_size) >0:
@@ -175,13 +175,13 @@ def main():
 
                     if j2 >= distance:
                         j3=i1 + "\t" +  str(j1[0]) + '\t' +  str(j1[1])
-                        out.write('%s\n' % j3)
+                        out_put.write('%s\n' % j3)
                    
                     else:
                         pass
         else:
             pass 
-        out.close()
+        out_put.close()
     continuous_distance(distance)
     
 
