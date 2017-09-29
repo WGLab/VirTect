@@ -82,8 +82,6 @@ We already download and generate the index for each of the virus in our virus da
 Fianly run the VirTect for virus detection from human RNA-seq data.
 
 ## OPTIONS
-
- python VirTect.py --help
  
  * -h, --help            show this help message and exit
  * --version show program''s version number and exit
@@ -108,7 +106,9 @@ Fianly run the VirTect for virus detection from human RNA-seq data.
                         Define the continuous mapping distance of mapping
                         reads to virus genome
 
+## Example
 
+    python VirTect.py --help
     python VirTect.py -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p10.genome -index_vir viruses_reference/viruses_757.fasta -t 8
 
 After the running VerTect, we will have the final viruses file *Final_continous_test_region.txt*, if the sample has some virus. 
