@@ -29,17 +29,18 @@ samtools (http://samtools.sourceforge.net/)
 
 bedtools (http://bedtools.readthedocs.io/en/latest/)
 
+FASTQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+
+IGV (http://software.broadinstitute.org/software/igv/)
+
+DAVID (https://david.ncifcrf.gov/)
+
 ## Links of useful database
 
 TCGA (https://cancergenome.nih.gov/)
 
 Human Papillomavirus (HPV) (https://pave.niaid.nih.gov/#home)
 
-FASTQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-
-IGV (http://software.broadinstitute.org/software/igv/)
-
-DAVID (https://david.ncifcrf.gov/)
 
 
 ## Installation
@@ -54,7 +55,7 @@ Then enter VirTect directory:
     
 ## Trimming
 
-Before, we used VerTict, we need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data
+Before, we use VerTict, we need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data, if you already trim the data, then no need to do the trimming again.
 
     python VerTect_cutadapt.py --help
     
