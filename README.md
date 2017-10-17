@@ -119,7 +119,7 @@ After the running VerTect, we will have the final viruses file *Final_continous_
 
 After virus detection from the samples, we may need to know that which gene is expressed in specfic virus, we need to do the Virus expression count. We need to run the following code to generate the count file. We have only viurs annotations for some HPV virus, however, we will work on it provide the annotation file for each of the virus in our virus database.
 
-    VerTect_count_expression.py --help
+    python VerTect_count_expression.py --help
 
 Still we are working on it to provide annotations for each of the virus in our virus database.
 
