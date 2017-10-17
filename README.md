@@ -62,7 +62,7 @@ Before, we use VerTict, we need to trim the data to make sure the quality of the
     python VerTect_cutadapt.py -1 Reads_1.fq -2 Reads_2.fq -F "AGATCGGAAGAG" -R "AGATCGGAAGAG"
 
 
-Here -F and -R are forward standard and reverse adapters, however, user can change to there own adapter if exist.
+Here -F and -R are forward standard and reverse adapters, however, you may change them if your adapter is different.
 
 ## Download and generate the index of human fasta file
 
@@ -72,7 +72,7 @@ Firsrt need to download the fasta file, if you don't have the human fasta file, 
     
     python download_fasta_index_v02.py -buildver hg38/hg19  
     
-This will downlaod the fasta, the gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download the hg38 fasta file the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19.
+This will downlaod the fasta, the gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download hg38 fasta file then the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19.
 
 ## Viruses reference genomes
 
