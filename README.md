@@ -15,7 +15,7 @@ This is the GitHub repository for the documentation of the VirTect software, des
 
 ## Dependency
 
-First we need to install the following publicly available tools to run the VirTect:
+First we need to install the following publicly available tools to run VirTect:
 
 cutadapt (http://cutadapt.readthedocs.io/en/stable/guide.html)
 
@@ -55,24 +55,24 @@ Then enter VirTect directory:
     
 ## Trimming
 
-Before, we use VerTict, we need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data, if you already trim the data, then no need to do the trimming again.
+Before, using VerTict, we may need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data, if you already trim the data, then no need to do the trimming again.
 
     python VerTect_cutadapt.py --help
     
     python VerTect_cutadapt.py -1 Reads_1.fq -2 Reads_2.fq -F "AGATCGGAAGAG" -R "AGATCGGAAGAG"
 
 
-Here -F and -R are forward standard and reverse adapters, however, you may change them if your adapter is different.
+Here -F and -R are forward and reverse adapters, however, you may change them if your adapter is different than above.
 
 ## Download and generate the index of human fasta file
 
-Firsrt need to download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
+First, we need to download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
 
     python download_fasta_index_v02.py --help
     
     python download_fasta_index_v02.py -buildver hg38/hg19  
     
-This will downlaod the fasta, the gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download hg38 fasta file then the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19.
+This will downlaod the fasta, gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download hg38 fasta file then the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19.
 
 ## Viruses reference genomes
 
@@ -80,7 +80,7 @@ We already download and generate the index for each of the virus in our virus da
 
 ## Synopsis
 
-Fianly run the VirTect for virus detection from human RNA-seq data.
+Fianly, run the VirTect for virus detection from human RNA-seq samples.
 
 ## OPTIONS
  
@@ -113,7 +113,7 @@ Fianly run the VirTect for virus detection from human RNA-seq data.
     
     python VirTect.py -t 12 -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p10.genome -index_vir viruses_reference/viruses_757.fasta -d 200
 
-After the running VerTect, we will have the final viruses file *Final_continous_region.txt*, if the sample has some virus/viruses. The continuous distance mapping distance virus genome depends on user input lenght of reads. 
+After the running VerTect, we will have the final viruses file *Final_continous_region.txt*, if the sample has some virus/viruses. The continuous distance mapping distance virus genome depends on user input lenght of reads *Please follow  VirTect updated version, since we are working on it to parallelize VirTect for multiple samples in same time*. 
 
 ## Virus expression count
 
