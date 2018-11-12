@@ -133,7 +133,7 @@ For academic and non-profit use, you fell free to fork, download, modify, distri
  ## Contact
 Atlas Khan (ak4046@cumc.columbia.edu)
 
-Kai Wang (kw2701@cumc.columbia.edu)
+Kai Wang (kaichop@gmail.com)
 
 ## Reference
 
