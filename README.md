@@ -64,10 +64,25 @@ Here -F and -R are forward and reverse adapters, however, you may change them if
 
 First, we need to download the fasta file, if you don't have the human fasta file, however, only run this code for first time to download the fasta file and geneate the index for fasta file.
 
-    python download_fasta_index_v02.py --help
+    python download_fasta_index_v0.0.2 --help
+    usage: download_fasta_index_v0.0.2 [-h] -buildver The genome version
+                                   [-index created index file]
+
+Downloaded the fasta file and generate the index file
+
+    optional arguments:
+    -h, --help            show this help message and exit
+    -buildver The genome version, --hg The genome version
+                        The version of the genome
+    -index created index file, --index created index file
+                        Create index file
+
+  ### Only Download Fasta/GTF
+    python download_fasta_index_v02.py -buildver hg38/hg19 -index NO
     
-    python download_fasta_index_v02.py -buildver hg38/hg19 -index YES/NO 
-    
+  ### Download Fasta/GTF and generated index 
+    python download_fasta_index_v02.py -buildver hg38/hg19 -index YES
+
 This will downlaod the fasta, gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download hg38 fasta file then the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19. Also we added to extra flag if need only to download the fasta file or GTF. 
 
 ## Viruses reference genomes
