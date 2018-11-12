@@ -1,17 +1,15 @@
 ## VirTect
 
-
-VirTect is a software tool that detect virus from RNA-Seq on human samples.
-
+VirTect is a computational tool that can use to detect virus from RNA-Seq on human samples.
 
 ## Introduction
 
-VirTect is an efficient software tool for virus detection. VirTect take NGS data as a input in FASTQ format and mapped to human reference genome using tophat. After subtraction of non-human sequence from the human sequence, VirTect used bwa-men command to align the non-human sequence to our defined 757 different viruses database to report the virus. After alignment of non-human sequence to virus database, VirTect do the filtrations to discriminate the viral sequence from the noise or artifact and finally report the real viruses. 
+VirTect is an efficient software tool for virus detection. VirTect take NGS data as a input in FASTQ format and mapped to human reference genome using tophat. After the subtraction of non-human sequence from the human sequence, VirTect used bwa-men command to align the non-human sequence to our defined 757 different viruses database to report the virus. After alignment of non-human sequence to virus database, VirTect do the filtrations to discriminate the viral sequence from the noise or artifact and finally report the real viruses. 
 
 Here is an example that how VirTect works, for the HCC sample, we have about 53 million paired reads, VirTect mapped about 51 of 53 million reads (about 96.7%) to human reference and subtracted the remaining about 2 millions, the non-human reads from the human sequence. Then VirTect mapped the non-human sequence to virues geomes, before filtrations, thousands of reads are mapped to different viruses in our defined virus database such as mapped to tick borne encephalitis, hepatitis C, cutthroat trout, and hepatitis B etc., however, only hepatitis B passed VirTect filtrations. Also we examined some of the virus, which did not pass our filtrations, however significant number of non-human reads mapped to them and we found that it is not a real viral sequence, however, it is mapped to poly(A) sequence of hepatitis C genotype 1.
 
 
-This is the GitHub repository for the documentation of the VirTect software, described in the paper listed below. If you like this repository, please click on the "Star" button on top of this page, to show appreciation to the repository maintainer. If you want to receive notifications on changes to this repository, please click the "Watch" button on top of this page.
+This is a GitHub repository for the documentation of the VirTect software, described in the paper listed below. If you like this repository, please click on the "Star" button on top of this page, to show appreciation to the repository maintainer. If you want to receive notifications on changes to this repository, please click the "Watch" button on top of this page.
 
 ## Dependency
 
@@ -41,8 +39,6 @@ TCGA (https://cancergenome.nih.gov/)
 
 Human Papillomavirus (HPV) (https://pave.niaid.nih.gov/#home)
 
-
-
 ## Installation
 
 Please clone the repository into your computer:
@@ -55,7 +51,7 @@ Then enter VirTect directory:
     
 ## Trimming
 
-Before, using VerTict, we may need to trim the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data, if you already trim the data, then no need to do the trimming again.
+Before, using VerTict, highly suggested to do triming of the data to make sure the quality of the data. To trim the data, we need to use the following code to trim the data, if you already trim the data, then no need to do the trimming again.
 
     python VerTect_cutadapt.py --help
     
@@ -70,9 +66,9 @@ First, we need to download the fasta file, if you don't have the human fasta fil
 
     python download_fasta_index_v02.py --help
     
-    python download_fasta_index_v02.py -buildver hg38/hg19  
+    python download_fasta_index_v02.py -buildver hg38/hg19 -index YES/NO 
     
-This will downlaod the fasta, gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download hg38 fasta file then the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19.
+This will downlaod the fasta, gencode gtf files, and also will generate the index file and will save in human_reference directory **this should be run for first time**. It will download the hg38 or hg19 fasta file based on user input i.e., if you want to download hg38 fasta file then the command will be: *python download_fasta_index_v02.py -buildver hg38* and same for hg19. Also we added to extra flag if need only to download the fasta file or GTF. 
 
 ## Viruses reference genomes
 
