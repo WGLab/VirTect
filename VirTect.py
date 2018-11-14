@@ -121,7 +121,7 @@ def main():
     
     print ("Aligning by tophat")
     def alignment():
-        cmd1='tophat -o '+out+' -p '+n_thread+' -G '+gtf+' '+index_dir+' '+fq1+'  '+fq2+''
+        cmd1='tophat2 -o '+out+' -p '+n_thread+' -G '+gtf+' '+index_dir+' '+fq1+'  '+fq2+''
         print 'Running ', cmd1
         os.system(cmd1)
     alignment()
