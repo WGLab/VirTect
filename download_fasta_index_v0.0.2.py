@@ -29,7 +29,7 @@ def main():
             os.system('''wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/GRCh38.p12.genome.fa.gz -P human_reference''')
     
             print ("Notice: The downloading the gtf file from gencode")
-            os.system('''wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.2wayconspseudos.gtf.gz -P human_reference''')
+            os.system('''wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.annotation.gtf.gz -P human_reference''')
             
             print ("Notice: Unziping the gzip files")
             os.system('''gunzip  human_reference/GRCh38.p12.genome.fa.gz''')
