@@ -126,6 +126,12 @@ Fianly, run the VirTect for virus detection from human RNA-seq samples.
 
 After the running VerTect, we will have the final viruses file *Final_continous_region.txt*, if the sample has some virus/viruses. The continuous distance mapping distance virus genome depends on user input lenght of reads. **Please follow  VirTect updated version, since we are working on it to parallelize VirTect for multiple samples in same time**. 
 
+## TEST VirTect
+
+If you already generated index, just need the following command to run the VirTect:
+
+    bash Run_test_VirTect.sh
+
 ## Virus expression count
 
 After virus detection from the samples, we may need to know that which gene is expressed in specfic virus, we need to do the Virus expression count. We need to run the following code to generate the count file. We have only viurs annotations for some HPV virus, however, we will work on it provide the annotation file for each of the virus in our virus database.
