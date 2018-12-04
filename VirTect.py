@@ -14,7 +14,7 @@ import subprocess
 import os.path
 import fileinput
 
-prog="VerTect.py"
+prog="VirTect.py"
 
 
 version = """%prog
