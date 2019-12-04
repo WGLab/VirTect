@@ -22,6 +22,7 @@ Copyright (C) 2017 Wang Genomic Lab
 VerTect is free for non-commercial use without warranty.
 Please contact the authors for commercial use.
 Written by Atlas Khan, ak4046@cumc.columbia.edu and atlas.akhan@gmail.com.
+Revised by Qian Liu for the maintenance. 
 ============================================================================
 """
 
