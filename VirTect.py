@@ -127,42 +127,43 @@ def main():
     alignment()
         
     def bam2fastq():
-        cmd2 ='samtools sort -n  '+out+'/unmapped.bam  -o '+out+'_sorted.bam' 
+        cmd2 ='samtools sort -n  '+out+'/unmapped.bam  -o '+out+'/unmapped_sorted.bam' 
         print 'Running ', cmd2
         os.system(cmd2)    
-        cmd3='bedtools bamtofastq -i  '+out+'_sorted.bam -fq  '+out+'_sorted_1.fq -fq2  '+out+'_sorted_2.fq'    
+        cmd3='bedtools bamtofastq -i  '+out+'/unmapped_sorted.bam -fq  '+out+'/unmapped_sorted_1.fq -fq2  '+out+'/unmapped_sorted_2.fq'    
         print 'Running ', cmd3
         os.system(cmd3)
     bam2fastq()
  
     def bwa_alignment():
-        cmd4= 'bwa mem '+index_vir+'  '+out+'_sorted_1.fq '+out+'_sorted_2.fq > '+out+'_aln.sam'
+        cmd4= 'bwa mem '+index_vir+'  '+out+'/unmapped_sorted_1.fq '+out+'/unmapped_sorted_2.fq > '+out+'/unmapped_aln.sam'
         print 'Running ', cmd4
         os.system(cmd4)
     bwa_alignment()
     
     def virus_detection():
-        cmd5= 'samtools view -Sb -h '+out+'_aln.sam > '+out+'_aln.bam'
+        cmd5= 'samtools view -Sb -h '+out+'/unmapped_aln.sam > '+out+'/unmapped_aln.bam'
         print 'Running ', cmd5
         os.system(cmd5)
 
-        cmd6= '''samtools view '''+out+"_aln.bam"+''' | cut -f3 | sort | uniq -c | awk '{if ($1>=400) print $0}' > '''+out+"_viruses_count.txt"+''' '''
+        cmd6= '''samtools view '''+out+"/unmapped_aln.bam"+''' | cut -f3 | sort | uniq -c | awk '{if ($1>=400) print $0}' > '''+out+"/unmapped_viruses_count.txt"+''' '''
         print 'Running ', cmd6
         os.system(cmd6)
     virus_detection() 
         
     def sort():
-        cmd7= '''samtools sort '''+out+"_aln.bam"+'''  -o '''+out+"_aln_sorted.bam"+''' '''
+        cmd7= '''samtools sort '''+out+"/unmapped_aln.bam"+'''  -o '''+out+"/unmapped_aln_sorted.bam"+''' '''
         os.system(cmd7)
     sort()
     
-    subprocess.call("./continuous_region.sh", shell=True)
-
+    #
+    #subprocess.call("./continuous_region.sh", shell=True)
+    os.system('''samtools depth '''+out+"/unmapped_aln_sorted.bam"+''' | awk '{if ($3>=5) print $0}' | awk '{ if ($2!=(ploc+1)) {if (ploc!=0){printf("%s %d-%d\n",$1,s,ploc);}s=$2} ploc=$2; }' > '''+out+"/continuous_region.txt"+'''  ''')
     
     print ("The continous length")
-    file =open("continuous_region.txt", "r")
+    file =open(out+"/continuous_region.txt", "r")
 
-    out_put =open("Final_continous_region.txt", "w")
+    out_put =open(out+"/Final_continous_region.txt", "w")
     
     if (os.fstat(file.fileno()).st_size) >0:
             for i in file.readlines():
@@ -183,11 +184,11 @@ def main():
     out_put.close()
         
 
-    final_output=open("Final_continous_region.txt",'r')
+    final_output=open(out+"/Final_continous_region.txt",'r')
     if (os.fstat(final_output.fileno()).st_size) >0:
         print ("----------------------------------------Note: The sample may have some real virus :(-----------------------------------------------------")
         headers = 'virus transcript_start transcript_end'.split()
-        for line in fileinput.input(['Final_continous_region.txt'], inplace=True):
+        for line in fileinput.input([out+'/Final_continous_region.txt'], inplace=True):
             if fileinput.isfirstline():
                 print '\t'.join(headers)
             print line.strip()
