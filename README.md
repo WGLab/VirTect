@@ -124,7 +124,7 @@ Fianly, run the VirTect for virus detection from human RNA-seq samples.
     
     python VirTect.py -t 12 -1 Reads_1.fq -2 Reads_2.fq -o Test -ucsc_gene human_reference/gencode.v25.chr_patch_hapl_scaff.annotation.gtf -index human_reference/GRCh38.p12.genome -index_vir viruses_reference/viruses_757.fasta -d 200
 
-After the running VerTect, we will have the final viruses file *Final_continous_region.txt*, if the sample has some virus/viruses. The continuous distance mapping distance virus genome depends on user input lenght of reads. **Please follow  VirTect updated version, since we are working on it to parallelize VirTect for multiple samples in same time**. 
+After the running VerTect, we will have the final viruses file *Final_continous_region.txt*, if the sample has some virus/viruses. The continuous distance mapping distance virus genome depends on user input length of reads. **Please follow  VirTect updated version, since we are working on it to parallelize VirTect for multiple samples in same time**. 
 
 ## TEST VirTect
 
@@ -134,7 +134,7 @@ If you already generated index, just need the following command to run the VirTe
 
 ## Virus expression count
 
-After virus detection from the samples, we may need to know that which gene is expressed in specfic virus, we need to do the Virus expression count. We need to run the following code to generate the count file. We have only viurs annotations for some HPV virus, however, we will work on it provide the annotation file for each of the virus in our virus database.
+After virus detection from the samples, we may need to know that which gene/transcript is expressed in specfic virus, we need to do the Virus expression count. We need to run the following code to generate the count file. We have only viurs annotations for some HPV virus, however, we will work on it provide the annotation file for each of the virus in our virus database.
 
     python VerTect_count_expression.py --help
 
