@@ -1,4 +1,4 @@
-#!/usr/bin/enu python
+#!/usr/bin/env python
 #Atlas Khan
 
 import os 
